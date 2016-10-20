@@ -2,6 +2,7 @@
   "name": "js-utilities",
   "version": "1.0.0",
   "description": "Common utilites",
+  "main": "src/js-utilities.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +11,24 @@
     "url": "git+https://github.com/GTMSportswear/js-utilities.git"
   },
   "keywords": [
-    "[gtmsportswear",
-    "gtm]"
+    "gtmsportswear",
+    "gtm",
+    "localStorage",
+    "systemjs",
+    "jspm"
   ],
   "author": "Chris Young",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/GTMSportswear/js-utilities/issues"
   },
+  "files": [
+    "src/**/*"
+  ],
+  "directories": {
+    "lib": "src"
+  },
+  "format": "esm",
   "homepage": "https://github.com/GTMSportswear/js-utilities#readme",
   "devDependencies": {
     "tslint": "^3.15.1",
