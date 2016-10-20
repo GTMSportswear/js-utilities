@@ -1,0 +1,27 @@
+{
+  "name": "js-utilities",
+  "version": "1.0.0",
+  "description": "Common utilites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GTMSportswear/js-utilities.git"
+  },
+  "keywords": [
+    "[gtmsportswear",
+    "gtm]"
+  ],
+  "author": "Chris Young",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GTMSportswear/js-utilities/issues"
+  },
+  "homepage": "https://github.com/GTMSportswear/js-utilities#readme",
+  "devDependencies": {
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.3"
+  }
+}
