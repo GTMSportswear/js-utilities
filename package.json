@@ -2,7 +2,6 @@
   "name": "js-utilities",
   "version": "1.0.0",
   "description": "Common utilites",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
