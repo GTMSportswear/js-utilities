@@ -1,6 +1,6 @@
 {
   "name": "js-utilities",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Common utilites",
   "main": "src/js-utilities.ts",
   "scripts": {
@@ -31,7 +31,15 @@
   "format": "esm",
   "homepage": "https://github.com/GTMSportswear/js-utilities#readme",
   "devDependencies": {
+    "@types/qunit": "^2.0.31",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-qunit": "^1.2.1",
+    "karma-systemjs": "^0.16.0",
+    "qunitjs": "^2.3.3",
+    "systemjs": "^0.19.40",
+    "traceur": "0.0.111",
     "tslint": "^3.15.1",
-    "typescript": "^2.0.3"
+    "typescript": "^2.4.2"
   }
 }
