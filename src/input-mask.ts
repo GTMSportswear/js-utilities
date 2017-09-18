@@ -128,7 +128,7 @@ export class InputMask {
       return returnValue;
   }
   
-    private static NumberIsTooLong(digitsArray, inputValue): boolean {
+  private static NumberIsTooLong(digitsArray, inputValue): boolean {
     if (digitsArray.length >= 10 && inputValue.length > 14)
       return true;
     else
