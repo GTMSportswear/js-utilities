@@ -66,7 +66,7 @@ QUnit.test('Should mask telephone input on blur', assert => {
 
   window.requestAnimationFrame(() => {
     assert.equal(inputElement.value, '(123) 456-7890');
-	done();
+    done();
   });
 });
 
