@@ -56,6 +56,20 @@ QUnit.test('Should mask telephone input and strip letters from entry', assert =>
   assert.equal(inputElement.value, '(123) 4  -    ');
 });
 
+QUnit.test('Should mask telephone input on blur', assert => {
+  const done = assert.async();
+  InputMask.TelephoneInputMask(inputElement);
+  inputElement.dispatchEvent(TestUtilities.FocusEvent);
+
+  inputElement.value = '(1234567890)   -    ';
+  inputElement.dispatchEvent(TestUtilities.BlurEvent);
+
+  window.requestAnimationFrame(() => {
+    assert.equal(inputElement.value, '(123) 456-7890');
+    done();
+  });
+});
+
 class TestUtilities {
   public static FocusEvent = new Event('focus', {
     bubbles: true,

@@ -33,11 +33,8 @@ export class InputMask {
           input.setSelectionRange(input.selectionStart, input.selectionEnd);
         });
 
-      if (digitsArray.length >= 10 && inputValue.length > 14)
-        return requestAnimationFrame(() => {
-          input.value = this.TelephoneInputMaskFormat(digitsArray);
-          input.setSelectionRange(input.selectionStart, input.selectionEnd);
-        });
+      if (this.NumberIsTooLong(digitsArray, inputValue))
+        return this.ApplyTelephoneMask(digitsArray, input);
 
       if ((cursorStart === 5 || cursorStart === 8) && digitsArray.length > 10 && inputValue.length >= 14) {
         cursorStart++;
@@ -91,8 +88,15 @@ export class InputMask {
       const inputValue = input.value;
       const digits = inputValue.match(digitRegex);
 
-      if (digits === null)
+      if (digits === null) {
         input.value = '';
+        return;
+      }
+      
+      const digitsArray = digits.join('');
+      
+      if (this.NumberIsTooLong(digitsArray, inputValue))
+        return this.ApplyTelephoneMask(digitsArray, input);
     });
   }
 
@@ -122,5 +126,19 @@ export class InputMask {
     }
     else
       return returnValue;
+  }
+  
+  private static NumberIsTooLong(digitsArray, inputValue): boolean {
+    if (digitsArray.length >= 10 && inputValue.length > 14)
+      return true;
+    else
+      return false;
+  }
+
+  private static ApplyTelephoneMask(digitsArray, input) {
+    return requestAnimationFrame(() => {
+      input.value = this.TelephoneInputMaskFormat(digitsArray);
+      input.setSelectionRange(input.selectionStart, input.selectionEnd);
+    });
   }
 }
